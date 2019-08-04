@@ -1,4 +1,4 @@
-### Scope (What is Node.js Exactly? - a beginner's introduction to Nodejs)
+### Scope ([What is Node.js Exactly? - a beginner's introduction to Nodejs](https://www.youtube.com/watch?v=pU9Q6oiQNd0))
 
 What is NodeJS?
 
@@ -36,9 +36,9 @@ One can also do this in a browser, e.g. do the same thing (use "window.a" instea
 
 Modules involve loading one file into another. If you have used require function, you already get the concept.
 
-```
+```javascript
 /* module1.js */
-var m2 = require(‘./module2');
+var m2 = require('./module2');
 m2();
 
 /* module2.js */
@@ -49,21 +49,20 @@ var a = 1;
 module.exports.b = 2; */
 
 module.exports = function() {
-	console.log(‘module 2!'
-);
+    console.log('module 2!');
 };
 ```
 
 ### npm modules
 
-npm = node package manager, which is built into Node
-NPM allows you to download and manage packages
-Type "npm install underscore" in a right folder (it is a popular module)
+npm = node package manager, which is built into Node\
+NPM allows you to download and manage packages\
+Type "npm install underscore" in a right folder (it is a popular module)\
 (Type "npm ls -g -depth=0" to list installed global packages)
 
-```
+```javascript
 /* module1.js */
-var _ = require(‘underscore');
+var _ = require('underscore');
 // Node will look into the "node_modules" file to see if the module is installed
 
 console.log(_); // The details of the object are shown
@@ -73,23 +72,23 @@ console.log(_); // The details of the object are shown
 - (You want to save the dependencies)
 - Type "npm init". You will create a file named "package.json".
 
-```
+```json
 /* package.json */
 {
-// This is an example
-"name": "whatisnode",
-"version": "0.0.0",
-"description": "",
-"main": "module1.js",
-"dependencies": {
-	"underscore": "^1.7.0"
-},
-"devDependencies": {},
-"scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
-},
-"author": ""
-"license": "ISC"
+    // This is an example
+    "name": "whatisnode",
+    "version": "0.0.0",
+    "description": "",
+    "main": "module1.js",
+    "dependencies": {
+        "underscore": "^1.7.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": ""
+    "license": "ISC"
 }
 ```
 - "npm install backbone" does not change "package.json". Use "npm install backbone -S" instead. "S" stands for "save"
