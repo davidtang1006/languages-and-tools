@@ -74,8 +74,8 @@ console.log(_); // The details of the object are shown
 
 ```json
 /* package.json */
+// This is an example
 {
-    // This is an example
     "name": "whatisnode",
     "version": "0.0.0",
     "description": "",
@@ -87,7 +87,7 @@ console.log(_); // The details of the object are shown
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": ""
+    "author": "",
     "license": "ISC"
 }
 ```

@@ -6,7 +6,7 @@ Some Babel stuff is installed. This can be seen in the package.json file. Babel 
 
 We are going to convert some React attributes to HTML attributes and add class properties. We are also going to use decorators.
 
-```json
+```
 /* ./package.json (Actually, comments are not supported in JSON file) */
 {
   "name": "react-tutorials",
@@ -668,7 +668,7 @@ Some HTML is grabbed from the “Start Bootstrap”, a website that provides the
 
 Bootstrap requires JavaScript to implement responsive web design. Normally, jQuery is needed for that. (Using jQuery overkills (過度地殺傷) a little.)
 
-```json
+```
 /* ./package.json */
 {
   "name": "react-tutorials",
@@ -1592,7 +1592,7 @@ We will work with two different components first:
 1. The entire to-do list
 2. A component (a to-do item)
 
-```json
+```
 /* ./package.json */
 {
   "name": "react-tutorials",

@@ -55,7 +55,7 @@ If we have an object that contains both data and an array…
 
 Redux is quite simple, but an example on GitHub may seem to be very complicated
 
-```json
+```
 /* ./package.json */
 {
   "name": "react-tutorials",
@@ -451,7 +451,7 @@ store.dispatch({
 
 We would like to tie Redux to React app application
 
-```json
+```
 /* ./package.json */
 {
   "name": "react-tutorials",

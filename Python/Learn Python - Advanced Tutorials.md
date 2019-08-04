@@ -4,7 +4,7 @@
 
 Generators are very easy to implement, but a bit difficult to understand.
 
-Generators are used to create iterators, but with a different approach. ***Generators are simple functions which return an iterable set of items, one at a time, in a special way.***
+Generators are used to create iterators, but with a different approach. **_Generators are simple functions which return an iterable set of items, one at a time, in a special way._**
 
 When an iteration over a set of item starts using the for statement, the generator is run. Once the generator's function code reaches a "yield" statement, the generator yields its execution back to the for loop, returning a new value from the set. The generator function can generate as many values (possibly infinite) as it wants, yielding each one in its turn.
 
@@ -107,7 +107,7 @@ Good. The fib function is a generator.
 
 ## List Comprehensions
 
-List comprehension is a very powerful tool, which ***creates a new list based on another list, in a single, readable line***.
+List comprehension is a very powerful tool, which **_creates a new list based on another list, in a single, readable line_**.
 
 For example, let's say we need to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
 
@@ -176,7 +176,7 @@ def foo(first, second, third, *therest):
     print("And all the rest... %s" % list(therest))
 ```
 
-The ***`therest`*** variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling "foo(1,2,3,4,5)" will print out:
+The **_`therest`_** variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling "foo(1,2,3,4,5)" will print out:
 ```
 First: 1
 Second: 2

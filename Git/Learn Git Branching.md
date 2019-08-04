@@ -11,38 +11,38 @@ Git wants to keep commits as lightweight as possible though, so it **doesn't jus
 Git also maintains a history of which commits were made when. That's why most commits have ancestor commits above them—we can designate this with arrows in a visualization. Maintaining history is great for everyone working on the project!
 
 It's a lot to take in, but for now you can think of commits as snapshots of the project. Commits are very lightweight and switching between them is wicked fast!
-- ***"git commit -m "[descriptive message]""***
+- **_"git commit -m "[descriptive message]""_**
 - Records file snapshots permanently in version history
 
 ### 2. Git Branches
 
-Branches in Git are incredibly lightweight as well. ***They are simply pointers to a specific commit***—nothing more. This is why many Git enthusiasts chant the mantra: branch early, and branch often.
+Branches in Git are incredibly lightweight as well. **_They are simply pointers to a specific commit_**—nothing more. This is why many Git enthusiasts chant the mantra: branch early, and branch often.
 
 Because there is no storage/memory overhead with making many branches, it's easier to logically divide up your work than have big beefy branches.
 
-When we start mixing branches and commits, we will see how these two features combine. For now, though, just remember that a branch essentially says, "***I want to include the work of this commit and all parent commits.***"
-- ***"git branch [branch-name]"***
+When we start mixing branches and commits, we will see how these two features combine. For now, though, just remember that a branch essentially says, "**_I want to include the work of this commit and all parent commits._**"
+- **_"git branch [branch-name]"_**
 - Creates a new branch
 Let's tell git we want to check out the branch with "git checkout 檢出 [branch-name]".
 This will put us on the new branch before committing our changes.
-By the way, here's a shortcut: if you want to create a new branch AND check it out at the same time, you can simply type ***"git checkout -b [branch-name]"***.
+By the way, here's a shortcut: if you want to create a new branch AND check it out at the same time, you can simply type **_"git checkout -b [branch-name]"_**.
 
 ### 3. Branches and Merging
 
-Great! We now know how to commit and branch. Now we need to learn some kind of way of combining the work from two different branches together. ***This will allow us to branch off, develop a new feature, and then combine it back in.***
+Great! We now know how to commit and branch. Now we need to learn some kind of way of combining the work from two different branches together. **_This will allow us to branch off, develop a new feature, and then combine it back in._**
 
 The first method to combine work that we will examine is git merge. Merging in Git creates a special commit that has **two unique parents**. A commit with two parents essentially means "I want to include all the work from this parent over here and this one over here, and the set of all their parents."
 
 It's easier with visuals, let's check it out in the next view
-- ***"git merge [branch]"***
+- **_"git merge [branch]"_**
 - Combines the specified branch's history into the current branch
 
 ### 4. Git Rebase
 
-The second way of combining work between branches is rebasing. Rebasing essentially ***takes a set of commits, "copies" them, and plops 輕輕地放下 them down somewhere else***.
+The second way of combining work between branches is rebasing. Rebasing essentially **_takes a set of commits, "copies" them, and plops 輕輕地放下 them down somewhere else_**.
 
 While this sounds confusing, the advantage of rebasing is that it can be used to make a nice linear sequence of commits. The commit log / history of the repository will be a lot cleaner if only rebasing is allowed.
-- ***"git rebase [branch]"***
+- **_"git rebase [branch]"_**
 - The branch specified is the branch one wants to rebase the current branch on
 
 ## Ramping up
@@ -55,7 +55,7 @@ Once you're comfortable moving around, your powers with other git commands will 
 
 #### HEAD
 
-First, we have to talk about "HEAD". ***HEAD is the symbolic name for the currently checked out commit***—it's essentially what commit you're working on top of.
+First, we have to talk about "HEAD". **_HEAD is the symbolic name for the currently checked out commit_**—it's essentially what commit you're working on top of.
 
 HEAD always points to the most recent commit which is reflected in the working tree. Most git commands which make changes to the working tree will start by changing HEAD.
 
@@ -68,7 +68,7 @@ After entering the command "git checkout C1", we now have: HEAD -> C1
 
 ### 2. Relative Refs
 
-Moving around in Git by specifying commit hashes can get a bit tedious. In the real world you won't have a nice commit tree visualization next to your terminal, so you'll have to use ***"git log"*** to see hashes.
+Moving around in Git by specifying commit hashes can get a bit tedious. In the real world you won't have a nice commit tree visualization next to your terminal, so you'll have to use **_"git log"_** to see hashes.
 
 Furthermore, hashes are usually a lot longer in the real Git world as well. For instance, the hash of the commit that introduced the previous level is "fed2da64c0efc5293610bdd892f82a58e8cbc5d8". Doesn't exactly roll off the tongue...
 
@@ -79,8 +79,8 @@ Like I said, specifying commits by their hash isn't the most convenient thing ev
 With relative refs, you can start somewhere memorable (like the branch "bugFix" or "HEAD") and work from there.
 
 Relative commits are powerful, but we will introduce two simple ones here:
-- ***Moving upwards one commit at a time with "^"***
-- ***Moving upwards a number of times with "~\<num\>"***
+- **_Moving upwards one commit at a time with "^"_**
+- **_Moving upwards a number of times with "~\<num\>"_**
 
 Let's look at the Caret (^) operator first. Each time you append that to a ref name, you are telling Git to find the parent of the specified commit.
 
@@ -97,13 +97,13 @@ The tilde operator (optionally) takes in a trailing number that specifies the nu
 
 You're an expert on relative refs now, so let's actually use them for something.
 
-One of the most common ways I use relative refs is to move branches around. You can directly reassign a branch to a commit with the "-f" option. So, something like: ***"git branch -f master HEAD~3"*** moves (by force) the master branch to three parents behind HEAD.
+One of the most common ways I use relative refs is to move branches around. You can directly reassign a branch to a commit with the "-f" option. So, something like: **_"git branch -f master HEAD~3"_** moves (by force) the master branch to three parents behind HEAD.
 
 ### 4. Reversing Changes in Git
 
 There are many ways to reverse changes in Git. <u>**And just like committing**</u>, reversing changes in Git has both a low-level component (staging individual files or chunks) and a high-level component (how the changes are actually reversed). Our application will focus on the latter.
 
-There are two primary ways to undo changes in Git—one is using ***"git reset"*** (e.g. "git reset HEAD~1") and the other is using ***"git revert"*** (e.g. "git revert HEAD").
+There are two primary ways to undo changes in Git—one is using **_"git reset"_** (e.g. "git reset HEAD~1") and the other is using **_"git revert"_** (e.g. "git revert HEAD").
 
 #### Git Reset
 
@@ -130,7 +130,7 @@ This may seem like a lot, but it's a simple concept.
 #### Git Cherry-pick
 
 The first command in this series is called "git cherry-pick". It takes on the following form:
-- ***"git cherry-pick \<Commit1\> \<Commit2\> <...>"***
+- **_"git cherry-pick \<Commit1\> \<Commit2\> <...>"_**
 
 It's a very straightforward way of saying that you would like to copy a series of commits below your current location ("HEAD"). I personally love "cherry-picking" because there is very little magic involved and it's easy to understand.
 
@@ -140,7 +140,7 @@ Git cherry-pick is great when you know which commits you want (and you know thei
 
 But what about the situation where you don't know what commits you want? Thankfully git has you covered there as well! We can use interactive rebasing for this.
 
-All interactive rebase means is ***using the "rebase" command with the "-i" option.***
+All interactive rebase means is **_using the "rebase" command with the "-i" option._**
 
 If you include this option, git will open up a UI to show you which commits are about to be copied below the target of the rebase. It also shows their commit hashes and messages, which is great for getting a bearing 清楚所在方位 on what's what.
 
@@ -215,7 +215,7 @@ You bet there is! Git tags support this exact use case—they (somewhat) permane
 More importantly though, they never move as more commits are created. You can't "check out" a tag and then complete work on that tag—tags exist as anchors in the commit tree that designate certain spots.
 
 Let's see what tags look like in practice.
-- ***"git tag [tag-name] [commit]"***
+- **_"git tag [tag-name] [commit]"_**
 
 ### 5. Git Describe
 
@@ -223,7 +223,7 @@ Because tags serve as such great "anchors" in the codebase 代碼庫, git has a 
 
 Git describe can help you get your bearings after you've moved many commits backwards or forwards in history; this can happen after <u>**you've completed a "git bisect"**</u> (a debugging search) or when sitting down at a co-worker's computer who just got back from vacation.
 
-Git describe takes the form of: ***"git describe \<ref\>"***, where "\<ref\>" is anything git can resolve into a commit. If you don't specify a ref, git just uses where you're checking out right now ("HEAD").
+Git describe takes the form of: **_"git describe \<ref\>"_**, where "\<ref\>" is anything git can resolve into a commit. If you don't specify a ref, git just uses where you're checking out right now ("HEAD").
 
 The output of the command looks like: "\<tag\>_\<numCommits\>_g\<hash\>", where "tag" is the **closest ancestor tag in history**, "numCommits" is how many commits away that tag is, and "\<hash\>" is the hash of the commit being described.
 
@@ -247,11 +247,11 @@ Our goal:
 
 Like the "~" modifier, the "^" modifier also accepts an optional number after it.
 
-Rather than specifying the number of generations to go back (what "~" takes), the modifier on "^” ***specifies which parent reference to follow*** from a merge commit. Remember that merge commits have multiple parents, so the path to choose is ambiguous.
+Rather than specifying the number of generations to go back (what "~" takes), the modifier on "^” **_specifies which parent reference to follow_** from a merge commit. Remember that merge commits have multiple parents, so the path to choose is ambiguous.
 
 Git will normally follow the "first" parent upwards from a merge commit, but specifying a number with "^" (e.g. " git checkout master^2") changes this default behaviour.
 
-The modifiers can be chained together (e.g. ***"git checkout HEAD~^2~2"***).
+The modifiers can be chained together (e.g. **_"git checkout HEAD~^2~2"_**).
 
 ### 3. Branch Spaghetti
 
@@ -270,7 +270,7 @@ Our goal:
 
 ### 1. Git Remotes
 
-Remote repositories aren't actually that complicated. In today's world of cloud computing it's easy to think that there's a lot of magic behind git remotes, but ***they are actually just copies of your repository on another computer***. You can typically talk to this other computer through the Internet, which allows you to transfer commits back and forth.
+Remote repositories aren't actually that complicated. In today's world of cloud computing it's easy to think that there's a lot of magic behind git remotes, but **_they are actually just copies of your repository on another computer_**. You can typically talk to this other computer through the Internet, which allows you to transfer commits back and forth.
 
 That being said, remote repositories have a bunch of great properties:
 - First and foremost, remotes serve as a great backup! Local git repositories have the ability to restore files to a previous state (as you know), but all that information is stored locally. By having copies of your git repository on other computers, you can lose all your local data and still pick up where you left off.
@@ -282,22 +282,22 @@ It becomes very popular to use websites that visualize activity around remote re
 
 Up until this point, Learn Git Branching has focused on teaching the basics of local repository work (branching, merging, rebasing, etc). However now that we want to learn about remote repository work, we need a command to set up the environment for those lessons. "git clone" will be that command.
 
-Technically, "git clone" in the real world is the command you'll use ***to create local copies of remote repositories*** (from GitHub for example). We use this command a bit differently in Learn Git Branching though—**"git clone" actually makes a remote repository out of your local one**. Sure, it's technically the opposite meaning of the real command, but it helps build the connection between cloning and remote repository work, so let's just run with it for now.
+Technically, "git clone" in the real world is the command you'll use **_to create local copies of remote repositories_** (from GitHub for example). We use this command a bit differently in Learn Git Branching though—**"git clone" actually makes a remote repository out of your local one**. Sure, it's technically the opposite meaning of the real command, but it helps build the connection between cloning and remote repository work, so let's just run with it for now.
 
 ### 2. Git Remote Branches
 
 Now that you've seen "git clone" in action, let's dive into what actually changed.
 
-The first thing you may have noticed is that a new branch appeared **in our local repository** called "o/master". This type of branch is called a ***remote branch***; remote branches have special properties because they serve a unique purpose.
+The first thing you may have noticed is that a new branch appeared **in our local repository** called "o/master". This type of branch is called a **_remote branch_**; remote branches have special properties because they serve a unique purpose.
 
 Remote branches reflect the state of remote repositories (<u>**since you last talked to those remote repositories**</u>). They help you **understand the difference** between your local work and what work is public—a critical step to take before sharing your work with others.
 
-**Remote branches** have the special property that when you check them out, ***you are put into detached "HEAD" mode***. Git does this on purpose because you can't work on these branches directly; you have to work elsewhere and then share your work with the remote (after which your remote branches will be updated).
+**Remote branches** have the special property that when you check them out, **_you are put into detached "HEAD" mode_**. Git does this on purpose because you can't work on these branches directly; you have to work elsewhere and then share your work with the remote (after which your remote branches will be updated).
 
 #### What is "o/"?
 
 You may be wondering what the leading "o/" is for on these remote branches. Well, remote branches also have a (required) naming convention—they are displayed in the format of:
-- ***"\<remote name\>/\<branch name\>"***
+- **_"\<remote name\>/\<branch name\>"_**
 
 Hence, if you look at a branch named "o/master", the branch name is "master" and the name of the remote is "o".
 
@@ -309,13 +309,13 @@ Unfortunately, the full name of "origin" does not fit in our UI, so we use "o" a
 
 Working with git remotes really just boils down to transferring data to and from other repositories. As long as we can send commits back and forth, we can share any type of update that is tracked by git (and thus share work, new files, new ideas, love letters, etc.).
 
-We will learn how to fetch data from a remote repository—the command for this is conveniently named ***"git fetch"***.
+We will learn how to fetch data from a remote repository—the command for this is conveniently named **_"git fetch"_**.
 
 You'll notice that as we update our remote repository, our remote branches will update to reflect that new representation.
 
 #### What fetch does
 
-"git fetch" performs two main steps, and ***two main steps only***. It:
+"git fetch" performs two main steps, and **_two main steps only_**. It:
 - downloads the commits that the remote has but are missing from our local repository, and...
 - updates where our remote branches point (for instance, "o/master")
 
@@ -342,7 +342,7 @@ There are actually many ways to do this—once you have new commits available lo
 - "git rebase o/master"
 - "git merge o/master"
 
-In fact, the workflow of fetching remote changes and then <u>**merging them**</u> is so common that git actually provides a command that does both at once! That command is ***"git pull"***.
+In fact, the workflow of fetching remote changes and then <u>**merging them**</u> is so common that git actually provides a command that does both at once! That command is **_"git pull"_**.
 
 ### 5. Simulating collaboration
 
@@ -356,11 +356,11 @@ Ok, so I've fetched changes from remote and incorporated them into my work local
 
 Well, the way to upload shared work is the opposite of downloading shared work. And what's the opposite of "git pull"? "git push"!
 
-***"git push" is responsible for uploading your changes to a specified remote and updating that remote to incorporate your new commits.*** Once "git push" completes, all your friends can then download your work from the remote.
+**_"git push" is responsible for uploading your changes to a specified remote and updating that remote to incorporate your new commits._** Once "git push" completes, all your friends can then download your work from the remote.
 
 You can think of "git push" as a command to "publish" your work. It has a bunch of subtleties that we will get into shortly, but let's start with baby steps...
 
-Please note that—the behaviour of "git push" with no arguments ***varies depending on one of git's settings called "push.default"***. The default value for this setting depends on the version of git you're using, but we are going to use the "upstream" value in our lessons. This isn't a huge deal, but it's worth checking your settings before pushing in your own projects.
+Please note that—the behaviour of "git push" with no arguments **_varies depending on one of git's settings called "push.default"_**. The default value for this setting depends on the version of git you're using, but we are going to use the "upstream" value in our lessons. This isn't a huge deal, but it's worth checking your settings before pushing in your own projects.
 
 ### 7. Diverged Work
 
@@ -384,7 +384,7 @@ Although "git merge" doesn't move your work (and instead just creates a merge co
 
 Awesome! Is there any way I can do this without typing so many commands?
 
-Of course—you already know "git pull" is just shorthand for a fetch and a merge. Conveniently enough, ***"git pull --rebase"*** is shorthand for a fetch and a rebase! Therefore, we have
+Of course—you already know "git pull" is just shorthand for a fetch and a merge. Conveniently enough, **_"git pull --rebase"_** is shorthand for a fetch and a rebase! Therefore, we have
 - "git pull --rebase; git push", and
 - "git pull; git push"
 
@@ -445,7 +445,7 @@ One thing that might have seemed "magical" about the last few lessons is that gi
 
 #### Remote tracking
 
-Long story short, this connection between "master" and "o/master" is explained simply by the "***remote tracking***" property of branches. The "master" branch is set to track "o/master" —this means there is an implied merge target and implied push destination for the "master" branch.
+Long story short, this connection between "master" and "o/master" is explained simply by the "**_remote tracking_**" property of branches. The "master" branch is set to track "o/master" —this means there is an implied merge target and implied push destination for the "master" branch.
 
 You may be wondering how this property got set on the "master" branch when you didn't run any commands to specify it. Well, when you clone a repository with git, this property is actually set for you automatically.
 
@@ -459,17 +459,17 @@ This also explains why you may see the following command output when cloning: "l
 
 Yes, you can! You can make any arbitrary branch track "o/master", and if you do so, that branch will have the same implied push destination and merge target as "master". This means you can run "git push" on a branch named "totallyNotMaster" and have your work pushed to the "master" branch on the remote!
 
-There are two ways to set this property. The first is to checkout a new branch by using a remote branch as the specified ref. Running ***"git checkout -b totallyNotMaster o/master"*** creates a new branch named "totallyNotMaster" and sets it to track o/master.
+There are two ways to set this property. The first is to checkout a new branch by using a remote branch as the specified ref. Running **_"git checkout -b totallyNotMaster o/master"_** creates a new branch named "totallyNotMaster" and sets it to track o/master.
 
 #### Way #2
 
-Another way to set remote tracking on a branch is to simply use the ***"git branch -u"*** option. Running "git branch -u o/master foo" will set the "foo" branch to track "o/master". If "foo" is currently checked out, you can even leave it off: "git branch -u o/master".
+Another way to set remote tracking on a branch is to simply use the **_"git branch -u"_** option. Running "git branch -u o/master foo" will set the "foo" branch to track "o/master". If "foo" is currently checked out, you can even leave it off: "git branch -u o/master".
 
 ### 4. Push arguments
 
 Great! Now that you know about remote tracking branches, we can start to uncover some of the mystery behind how git push, fetch, and pull work. We're going to tackle one command at a time but the concepts between them are very similar.
 
-First, we'll look at "git push". You learned in the remote tracking lesson that git figured  out the remote and the branch to push to by looking at the properties of the currently checked out branch (the remote that it "tracks"). This is the behaviour with no arguments specified, but git push can optionally take arguments in the form of: ***"git push \<remote\> \<place\>"***.
+First, we'll look at "git push". You learned in the remote tracking lesson that git figured  out the remote and the branch to push to by looking at the properties of the currently checked out branch (the remote that it "tracks"). This is the behaviour with no arguments specified, but git push can optionally take arguments in the form of: **_"git push \<remote\> \<place\>"_**.
 
 What is a "\<place\>" parameter you say? We'll dive into the specifics soon, but first an example. Issuing the command: "git push origin master" translates to this in English:
 
@@ -487,7 +487,7 @@ You might then be wondering—what if we wanted the source and destination to be
 
 Well unfortunately that's impossible in git... just kidding! Of course, it's possible... git has tons and tons of flexibility (almost too much).
 
-In order to specify both the source and the destination of "\<place\>", simply join the two together with a colon: ***"git push origin \<source\>:\<destination\>"*** (e.g. "git push origin foo^:master").
+In order to specify both the source and the destination of "\<place\>", simply join the two together with a colon: **_"git push origin \<source\>:\<destination\>"_** (e.g. "git push origin foo^:master").
 
 This is commonly referred to as a colon refspec. Refspec is just a fancy name for a location that git can figure out (like the branch "foo" or even just "HEAD~1").
 
@@ -503,7 +503,7 @@ Let's go over the concepts one at a time...
 
 #### The \<place\> parameter
 
-If you specify a place with git fetch like in the following command: ***"git fetch origin foo"***
+If you specify a place with git fetch like in the following command: **_"git fetch origin foo"_**
 
 Git will go to the "foo branch" on the remote, grab all the commits that aren't present locally, and then plop them down onto the "o/foo" branch locally.
 
@@ -513,17 +513,17 @@ Well git makes a special exception in this case because you might have work on t
 
 "Well in that case, what happens if I explicitly define both the source and destination with "\<source\>:\<destination\>" (e.g. "git fetch origin foo~1:bar")?"
 
-If you feel passionate enough to fetch commits directly onto a local branch, ***then yes you can specify that with a colon refspec***. ***You can't fetch commits onto a branch that is checked out***, but otherwise git will allow this.
+If you feel passionate enough to fetch commits directly onto a local branch, **_then yes you can specify that with a colon refspec_**. **_You can't fetch commits onto a branch that is checked out_**, but otherwise git will allow this.
 
-Here is the only catch though—***"\<source\>" is now a place on the remote and "\<destination\>"*** is a local place to put those commits. It's the exact opposite of git push, and that makes sense since we are transferring data in the opposite direction!
+Here is the only catch though—**_"\<source\>" is now a place on the remote and "\<destination\>"_** is a local place to put those commits. It's the exact opposite of git push, and that makes sense since we are transferring data in the opposite direction!
 
 That being said, developers rarely do this in practice. I'm introducing it mainly as a way to conceptualize how "fetch" and "push" are quite similar, just in opposite directions.
 
 ### 7. Oddities of "\<source\>"
 
-Git abuses the "<source>" parameter in two weird ways. These two abuses come from the fact that you can technically specify "nothing" as a valid "source" for both git push and git fetch. The way you specify nothing is via an empty argument:
-- ***"git push origin :side"***
-- ***"git fetch origin :bugFix"***
+Git abuses the "\<source\>" parameter in two weird ways. These two abuses come from the fact that you can technically specify "nothing" as a valid "source" for both git push and git fetch. The way you specify nothing is via an empty argument:
+- **_"git push origin :side"_**
+- **_"git fetch origin :bugFix"_**
 
 Let's see what these do...
 
@@ -540,7 +540,7 @@ That's because "git pull" at the end of the day is really just shorthand for a f
 This applies even when you use crazy-complicated arguments as well. Let's see some examples:
 
 Here are some equivalent commands in git:
-- ***"git pull origin foo" is equal to: "git fetch origin foo; git merge o/foo"***, and
-- ***"git pull origin bar~1:bugFix" is equal to: "git fetch origin bar~1:bugFix; git merge bugFix"***
+- **_"git pull origin foo" is equal to: "git fetch origin foo; git merge o/foo"_**, and
+- **_"git pull origin bar\~1:bugFix" is equal to: "git fetch origin bar\~1:bugFix; git merge bugFix"_**
 
 See? "git pull" is really just shorthand for fetch + merge, and all "git pull" cares about is where the commits ended up (the "destination" argument that it figures out during fetch).
