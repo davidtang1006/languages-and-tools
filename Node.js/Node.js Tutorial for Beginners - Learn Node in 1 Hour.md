@@ -5,7 +5,7 @@
 #### Runtime environment (1)
 
 It will be great to execute JavaScript outside of a browser\
-(Node is a ***runtime environment*** for executing JavaScript code)\
+(Node is a **_runtime environment_** for executing JavaScript code)\
 Before Node, we use JavaScript only to build applications and run inside of a browser
 
 #### A browser does this:
@@ -33,7 +33,7 @@ The object allows us to work in an environment in which our code is running
 #### History
 
 Up to 2009, the only way to execute JavaScript code was inside of a browser\
-Ryan Dahl had an idea: it will be great to execute JS outside of a browser. He took Google v8 engine (the fastest JS engine out there), and <u>**embedded**</u> it inside a C++ program:\
+Ryan Dahl had an idea: it will be great to execute JS outside of a browser. He took Google v8 engine (the fastest JS engine out there), and *embedded* it inside a C++ program:\
 [Chrome [v8]] >> [Node.exe [v8]]\
 Node.exe uses v8 engine
 
@@ -191,7 +191,7 @@ function(exports, require, module, __filename, __dirname) {
 ```
 This is an "immediately invoked function expression", or "iif"\
 We can actually write `exports.log = log;` instead of `module.exports.log = log;`.\
-We cannot write `exports = log;` because `exports` <u>**is a reference to `module.exports`**</u> and we cannot change the reference
+We cannot write `exports = log;` because `exports` *is a reference to `module.exports`* and we cannot change the reference
 
 ### Path Module
 

@@ -101,7 +101,7 @@ One of the most common ways I use relative refs is to move branches around. You 
 
 ### 4. Reversing Changes in Git
 
-There are many ways to reverse changes in Git. <u>**And just like committing**</u>, reversing changes in Git has both a low-level component (staging individual files or chunks) and a high-level component (how the changes are actually reversed). Our application will focus on the latter.
+There are many ways to reverse changes in Git. *And just like committing*, reversing changes in Git has both a low-level component (staging individual files or chunks) and a high-level component (how the changes are actually reversed). Our application will focus on the latter.
 
 There are two primary ways to undo changes in Git—one is using **_"git reset"_** (e.g. "git reset HEAD~1") and the other is using **_"git revert"_** (e.g. "git revert HEAD").
 
@@ -221,7 +221,7 @@ Let's see what tags look like in practice.
 
 Because tags serve as such great "anchors" in the codebase 代碼庫, git has a command to describe where you are relative to the closest "anchor" (aka tag). And that command is called "git describe"!
 
-Git describe can help you get your bearings after you've moved many commits backwards or forwards in history; this can happen after <u>**you've completed a "git bisect"**</u> (a debugging search) or when sitting down at a co-worker's computer who just got back from vacation.
+Git describe can help you get your bearings after you've moved many commits backwards or forwards in history; this can happen after *you've completed a "git bisect"* (a debugging search) or when sitting down at a co-worker's computer who just got back from vacation.
 
 Git describe takes the form of: **_"git describe \<ref\>"_**, where "\<ref\>" is anything git can resolve into a commit. If you don't specify a ref, git just uses where you're checking out right now ("HEAD").
 
@@ -290,7 +290,7 @@ Now that you've seen "git clone" in action, let's dive into what actually change
 
 The first thing you may have noticed is that a new branch appeared **in our local repository** called "o/master". This type of branch is called a **_remote branch_**; remote branches have special properties because they serve a unique purpose.
 
-Remote branches reflect the state of remote repositories (<u>**since you last talked to those remote repositories**</u>). They help you **understand the difference** between your local work and what work is public—a critical step to take before sharing your work with others.
+Remote branches reflect the state of remote repositories (*since you last talked to those remote repositories*). They help you **understand the difference** between your local work and what work is public—a critical step to take before sharing your work with others.
 
 **Remote branches** have the special property that when you check them out, **_you are put into detached "HEAD" mode_**. Git does this on purpose because you can't work on these branches directly; you have to work elsewhere and then share your work with the remote (after which your remote branches will be updated).
 
@@ -342,7 +342,7 @@ There are actually many ways to do this—once you have new commits available lo
 - "git rebase o/master"
 - "git merge o/master"
 
-In fact, the workflow of fetching remote changes and then <u>**merging them**</u> is so common that git actually provides a command that does both at once! That command is **_"git pull"_**.
+In fact, the workflow of fetching remote changes and then *merging them* is so common that git actually provides a command that does both at once! That command is **_"git pull"_**.
 
 ### 5. Simulating collaboration
 

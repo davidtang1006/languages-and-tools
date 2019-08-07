@@ -200,4 +200,4 @@ print("Result: %d" %(result))
 # The sum is: 6
 # Result: 1
 ```
-Note that we have ***`**options`***
+Note that we have **_`**options`_**
