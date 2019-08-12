@@ -76,11 +76,11 @@ module.exports = {
 
 - Side note: the following feedback appeared:\
 One CLI (command line interface) for webpack must be installed. These are recommended choices, delivered as separate packages:
-    - webpack-cli (https://github.com/webpack/webpack-cli)\
-   The original webpack full-featured CLI.
-    - webpack-command (https://github.com/webpack-contrib/webpack-command)\
-   A lightweight, opinionated webpack CLI.\
-- We will use "npm" to install the CLI via "npm install -D".\
+    - webpack-cli (<https://github.com/webpack/webpack-cli>)\
+    The original webpack full-featured CLI.
+    - webpack-command (<https://github.com/webpack-contrib/webpack-command>)\
+    A lightweight, opinionated webpack CLI.
+- We will use "npm" to install the CLI via "npm install -D".
 - Another feedback:\
 Which one do you like to install (webpack-cli/webpack-command):\
 (I chose “webpack-cli”)

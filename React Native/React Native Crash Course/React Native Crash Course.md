@@ -68,7 +68,7 @@
 
 ### Android SDK & AVD Setup for React Native (Extra)
 
-You need Android Studio, SDK and AVD set up if you want to use React Native, Cordova or Ionic (refer: https://facebook.github.io/react-native/docs/getting-started.html)
+You need Android Studio, SDK and AVD set up if you want to use React Native, Cordova or Ionic (refer: <https://facebook.github.io/react-native/docs/getting-started.html>)
 1. Make sure Java, Node is installed
 2. Install Python2 via Chocolatey (“choco install -y python2”)
 3. Install Android Studio

@@ -144,17 +144,22 @@ We want to have live reload
 ## Side note: What local host 8080 is
 
 Short answer: “this machine, port 8080”.
-Slightly longer short answer: an application, typically a web application, that is running on the user's own computer, utilizing UDP or typically TCP port 8080. If such software is, in fact running, and if it is web software (HTTP), you should be able to access it using the URL: http://localhost:8080/
-Complete answer:
-On the Internet, everything connected has an IP address which uniquely identifies Internet devices. IP addresses also come in two flavours: public and private.
+
+Slightly longer short answer: an application, typically a web application, that is running on the user's own computer, utilizing UDP or typically TCP port 8080. If such software is, in fact running, and if it is web software (HTTP), you should be able to access it using the URL: <http://localhost:8080/>.
+
+Complete answer: On the Internet, everything connected has an IP address which uniquely identifies Internet devices. IP addresses also come in two flavours: public and private.
 - The public addresses are accessible to anyone on the Internet.
 - The private addresses are only accessible to your LAN, or Local Area Network.
 - In any environment, there is usually a device called a router that translates Internet packets between the local network and the public Internet. Every such device is able to reuse private IP addresses within their own private environment—homes reuse the same IP addresses that company employees use at their workstations.
 - For example, 192.168.1.100 is a private IP address. It will never be a public IP address, and the same IP address 192.168.1.100 exists hundreds of thousands if not millions of times all over the world. NAT translation, a function of the router, ensures that your Internet messages, called packets, have their private IP address self-identity swapped out for a shared public IP address, and vice-versa for packets coming back.
+
 Most public IP addresses have names, called DNS hostnames, and many private IP addresses do, too.
-- For example, www.google.com is a DNS hostname that has an IP address. If you open a command prompt and type “ping www.google.com”, you will find that your computer translated that hostname to an IP address, such as 172.217.2.228, and it is sending ICMP (Internet Control Message Protocol) packets to it and reporting the time taken to get a response.
+- For example, [www.google.com](http://www.google.com) is a DNS hostname that has an IP address. If you open a command prompt and type `ping www.google.com`, you will find that your computer translated that hostname to an IP address, such as 172.217.2.228, and it is sending ICMP (Internet Control Message Protocol) packets to it and reporting the time taken to get a response.
+
 The universal hostname name for “myself” on any Internet device is “localhost”, and the universal IP address for “localhost” is the private IP address 127.0.0.1. This address is not recognizable to your router; only your device/computer ever “sees” it.
+
 The often optional but nonetheless conventional “www.” prefix part of the typical website hostname suggests that the Internet device, or host, is responsible for serving a World Wide Web application.
+
 - There are many types of applications that run on the Internet, not just World Wide Web, including, for example
     - E-mail
     - FTP (file transfer protocol)
@@ -165,8 +170,9 @@ Often when web software developers develop or deploy web applications, they will
 - It is just a “random” port that web software is listening on because someone chose to set it up that way.
 - Only one software application can listen on any port on the same device, so the uniqueness of the port number is required.
 - The number could have been almost any port, such as, say, 2018, or 12345. But 8080 is handy because it's distinct from port 80, the default port for the World Wide Web, and yet it looks a lot like 80.
-So, “localhost 8080” means “this computer, or 127.0.0.1, application on port 8080”, or if it is web-related (and typically is), http://localhost:8080/. The construction of that URL is: {scheme}://{hostname}:{port}{path}, where {scheme} is “http”, {hostname} is “localhost”, {port} is “8080”, and {path} is “/”.
-Note that the HTTP protocol, which is the protocol used by the World Wide Web, specifies that the hostname is included as a request header, or passed directly to the application. So, http://127.0.0.1:8080/, where “localhost” is replaced with the IP address “127.0.0.1”, will reach the same application, but it might not work correctly, or not the same, if the web software is waiting for a request for the hostname “localhost”.
+So, “localhost 8080” means “this computer, or 127.0.0.1, application on port 8080”, or if it is web-related (and typically is), <http://localhost:8080/>. The construction of that URL is: {scheme}://{hostname}:{port}{path}, where {scheme} is “http”, {hostname} is “localhost”, {port} is “8080”, and {path} is “/”.
+
+Note that the HTTP protocol, which is the protocol used by the World Wide Web, specifies that the hostname is included as a request header, or passed directly to the application. So, <http://127.0.0.1:8080/>, where “localhost” is replaced with the IP address “127.0.0.1”, will reach the same application, but it might not work correctly, or not the same, if the web software is waiting for a request for the hostname “localhost”.
 
 ## REACT JS TUTORIAL #2 - ReactJS Components & Rendering
 
