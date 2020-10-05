@@ -48,7 +48,7 @@
 
 ### (7:15) APIs for Device Interaction
 
-- CameralRoll
+- CameraRoll
 - AsyncStorage
 - Geolocation
 - ImageEditor

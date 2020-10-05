@@ -91,7 +91,7 @@ def fib():
 ```
 
 Output:
-```
+```txt
 Good. The fib function is a generator.
 1
 1
@@ -155,7 +155,7 @@ print(newlist)
 ```
 
 Output:
-```
+```txt
 [34, 44, 68, 44, 12]
 ```
 
@@ -177,7 +177,7 @@ def foo(first, second, third, *therest):
 ```
 
 The **_`therest`_** variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling "foo(1,2,3,4,5)" will print out:
-```
+```txt
 First: 1
 Second: 2
 Third: 3

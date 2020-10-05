@@ -1,4 +1,4 @@
-## [Basic information (Webpack Tutorial - Replace Gulp or Grunt plugins with a single tool)](https://www.youtube.com/watch?annotation_id=annotation_4139363737&feature=iv&src_vid=MhkGQAoc7bc&v=9kJVYpOqcVU)
+## [Basic information (Webpack Tutorial - Replace Gulp or Grunt plugins with a single tool)](https://www.youtube.com/watch?v=9kJVYpOqcVU)
 
 Webpack is a module loader. There is three module loader out there, namely “require.js”, “Browserify” and “Webpack”.  “Browserify” and “Webpack” are more popular.
 

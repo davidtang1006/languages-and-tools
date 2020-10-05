@@ -8,7 +8,7 @@ It will be great to execute JavaScript outside of a browser\
 (Node is a **_runtime environment_** for executing JavaScript code)\
 Before Node, we use JavaScript only to build applications and run inside of a browser
 
-#### A browser does this:
+#### A browser does this
 
 JS Code >> JS Engine >> Machine code\
 JS Engine is a compiler\
@@ -58,7 +58,7 @@ Node applications are highly-scalable, data-intensive and real-time (they update
 Being asynchronous is like a waiter serving different tables. The waiters do not have to wait for the chef to cook one meal before they serve another table.\
 Similarly, a single thread is used to handle multiple requests
 
-#### A counter example:
+#### A counter example
 
 We have blocking/synchronous architecture (ASP.NET (extra work is needed for it to use asynchronous architecture))\
 The waiter waits after knowing the order of one table\
@@ -124,7 +124,7 @@ Every Node application has a main module
 
 Check out the module object by typing: `console.log(module);`\
 The returned string:
-```
+```txt
 Module {
     id: '.',
     exports: {},
@@ -240,7 +240,7 @@ Node is run outside of a browser/on the server
 
 ### File System Module
 
-```js
+```javascript
 const fs = require('fs');
 // Almost every operation comes in two forms: blocking/asynchronous and non-blocking/synchronous
 const files = fs.readdirSync('./');

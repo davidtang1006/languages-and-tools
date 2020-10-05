@@ -72,7 +72,7 @@ console.log(_); // The details of the object are shown
 - (You want to save the dependencies)
 - Type "npm init". You will create a file named "package.json".
 
-```json
+```javascript
 /* package.json */
 // This is an example
 {

@@ -5,7 +5,7 @@ React is a functional reactive UI/view layer to all the data in the state of one
 “MobX + React” will be a simple framework\
 The work it takes to get started with something like Redux, Relay or Flux is sometimes daunting (令人畏懼的) and somehow unnecessary
 
-```
+```js
 /* ./package.json */
 {
   "name": "react-mobx-todos",

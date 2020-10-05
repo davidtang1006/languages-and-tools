@@ -113,7 +113,7 @@ The tool “create-react-app” allows one to start working with React right awa
 </html>
 ```
 
-```json
+```js
 /* ./public/manifest.json */
 {
   "short_name": "React App",
