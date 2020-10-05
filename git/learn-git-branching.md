@@ -162,11 +162,11 @@ To achieve this goal.
 
 What we have:
 
-<img src="./learn-git-branching-img/a-mixed-bag-01.png" alt="a-mixed-bag-01" width="200"/>
+<img src="./resources/a-mixed-bag-01.png" alt="a-mixed-bag-01" width="200"/>
 
 Our goal:
 
-<img src="./learn-git-branching-img/a-mixed-bag-02.png" alt="a-mixed-bag-02" width="400"/>
+<img src="./resources/a-mixed-bag-02.png" alt="a-mixed-bag-02" width="400"/>
 
 ### 2. Juggling Commits #1
 
@@ -184,11 +184,11 @@ There are many ways to accomplish this overall goal (I see you eyeing cherry-pic
 
 What we have:
 
-<img src="./learn-git-branching-img/a-mixed-bag-03.png" alt="a-mixed-bag-03" width="200"/>
+<img src="./resources/a-mixed-bag-03.png" alt="a-mixed-bag-03" width="200"/>
 
 Our goal:
 
-<img src="./learn-git-branching-img/a-mixed-bag-04.png" alt="a-mixed-bag-04" width="400"/>
+<img src="./resources/a-mixed-bag-04.png" alt="a-mixed-bag-04" width="400"/>
 
 ### 3. Juggling Commits #2
 
@@ -198,11 +198,11 @@ The only issue here is that there is a lot of reordering going on, which can int
 
 What we have:
 
-<img src="./learn-git-branching-img/a-mixed-bag-05.png" alt="a-mixed-bag-05" width="200"/>
+<img src="./resources/a-mixed-bag-05.png" alt="a-mixed-bag-05" width="200"/>
 
 Our goal:
 
-<img src="./learn-git-branching-img/a-mixed-bag-06.png" alt="a-mixed-bag-06" width="600"/>
+<img src="./resources/a-mixed-bag-06.png" alt="a-mixed-bag-06" width="600"/>
 
 ### 4. Git Tags
 
@@ -237,11 +237,11 @@ Upper management is making this a bit trickier though—they want the commits to
 
 What we have:
 
-<img src="./learn-git-branching-img/advanced-topics-01.png" alt="advanced-topics-01" width="600"/>
+<img src="./resources/advanced-topics-01.png" alt="advanced-topics-01" width="600"/>
 
 Our goal:
 
-<img src="./learn-git-branching-img/advanced-topics-02.png" alt="advanced-topics-02" width="400"/>
+<img src="./resources/advanced-topics-02.png" alt="advanced-topics-02" width="400"/>
 
 ### 2. Specifying Parents
 
@@ -260,11 +260,11 @@ Branch "one" needs a re-ordering and a deletion of "C5". "two" needs pure reorde
 
 What we have:
 
-<img src="./learn-git-branching-img/advanced-topics-03.png" alt="advanced-topics-03" width="200"/>
+<img src="./resources/advanced-topics-03.png" alt="advanced-topics-03" width="200"/>
 
 Our goal:
 
-<img src="./learn-git-branching-img/advanced-topics-04.png" alt="advanced-topics-04" width="600"/>
+<img src="./resources/advanced-topics-04.png" alt="advanced-topics-04" width="600"/>
 
 ## Git Remote Repository - Push & Pull
 
@@ -405,11 +405,11 @@ So, for this workflow we combine two things:
 
 What we have:
 
-<img src="./learn-git-branching-img/to-origin-and-beyond-01.png" alt="to-origin-and-beyond-01.png" width="600"/>
+<img src="./resources/to-origin-and-beyond-01.png" alt="to-origin-and-beyond-01.png" width="600"/>
 
 Our goal:
 
-<img src="./learn-git-branching-img/to-origin-and-beyond-02.png" alt="to-origin-and-beyond-02.png" width="600"/>
+<img src="./resources/to-origin-and-beyond-02.png" alt="to-origin-and-beyond-02.png" width="600"/>
 
 ### 2. Why not merge?
 
@@ -431,11 +431,11 @@ Some developers love to preserve history and thus prefer merging. Others (like m
 
 What we have:
 
-<img src="./learn-git-branching-img/to-origin-and-beyond-03.png" alt="to-origin-and-beyond-03.png" width="600"/>
+<img src="./resources/to-origin-and-beyond-03.png" alt="to-origin-and-beyond-03.png" width="600"/>
 
 Our goal:
 
-<img src="./learn-git-branching-img/to-origin-and-beyond-04.png" alt="to-origin-and-beyond-04.png" width="600"/>
+<img src="./resources/to-origin-and-beyond-04.png" alt="to-origin-and-beyond-04.png" width="600"/>
 
 ### 3. Remote-Tracking branches
 
